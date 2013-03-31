@@ -25,6 +25,13 @@
   </div>
 </div>
 
+<% flash.each do |key, msg| %>
+  <%= content_tag :div, class: "alert alert-#{key}", id: "notice" do %>
+      <a class="close" data-dismiss="alert" href="#">&times;</a>
+      <%= msg %>
+  <% end %>
+<% end %>
+
 <%= yield %>
 
 </body>

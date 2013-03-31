@@ -6,7 +6,8 @@ class User
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :token_authenticatable
+  before_save :ensure_authentication_token
 
   ## Database authenticatable
   field :email,              :type => String, :default => ""
@@ -37,8 +38,8 @@ class User
   # field :unlock_token,    :type => String # Only if unlock strategy is :email or :both
   # field :locked_at,       :type => Time
 
-  ## Token authenticatable
-  # field :authentication_token, :type => String
+  # Token authenticatable
+  field :authentication_token, :type => String
 
   field :name
 

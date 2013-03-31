@@ -16,6 +16,8 @@ gem "therubyracer"
 gem "less-rails"
 gem 'rack-cache', :require => 'rack/cache'
 gem 'dragonfly', '~>0.9.14'
+
+gem 'pry'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

@@ -3,10 +3,12 @@ class HomeController < ApplicationController
   end
 
   def new_entry
-    @entry = Entry.new
   end
 
   def save_entry
-    binding.pry
+    entry = Entry.new(params[:entry])
+    entry.check_in_at = Time.now
+    entry.save
+    redirect_to :back, notice: 'created entry'
   end
 end

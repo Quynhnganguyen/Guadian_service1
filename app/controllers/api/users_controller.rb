@@ -4,7 +4,7 @@ class Api::UsersController < ApplicationController
     if @user.blank?
       render text: 'Invalid username', status: 401
     elsif @user.valid_password?(params[:password])
-      render json: @user
+      render json: { email: @user.email, authentication_token: @user.authentication_token }
     else
       @user = nil
       render text: 'Invalid password', status: 401
