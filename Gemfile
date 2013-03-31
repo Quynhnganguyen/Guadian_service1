@@ -5,8 +5,17 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-
-
+gem 'mongoid',  '2.0.0.rc.6'
+gem 'bson_ext', '~> 1.2'
+gem 'devise'
+gem 'simple_form'
+gem "twitter-bootstrap-rails"
+gem 'jquery-rails'
+gem "compass", ">= 0.10.6"
+gem "therubyracer"
+gem "less-rails"
+gem 'rack-cache', :require => 'rack/cache'
+gem 'dragonfly', '~>0.9.14'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
