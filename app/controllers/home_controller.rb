@@ -11,4 +11,5 @@ class HomeController < ApplicationController
     entry.save
     redirect_to :back, notice: 'created entry'
   end
+  
 end

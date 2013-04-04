@@ -24,4 +24,5 @@ class Api::EntriesController < ApplicationController
       render text: 'entry not found'
     end
   end
+  
 end

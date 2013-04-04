@@ -1,5 +1,7 @@
 <h1>Entries</h1>
-
+<button class= "btn" style = "float: right; margin-bottom: 10px;">
+      <%= link_to "Manage User", admin_users_path %>
+</button><br>
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -19,8 +21,9 @@
         <td><%= e.user.try(:email) %></td>
         <td><%= e.check_in_at %></td>
         <td><%= e.check_out_at %></td>
-        <td></td>
+        <td><%= link_to "Delete", admin_entry_path(e), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+    
   </tbody>
 </table>

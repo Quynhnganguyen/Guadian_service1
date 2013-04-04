@@ -12,6 +12,7 @@ class User
   ## Database authenticatable
   field :email,              :type => String, :default => ""
   field :encrypted_password, :type => String, :default => ""
+
   
   ## Recoverable
   field :reset_password_token,   :type => String
@@ -44,6 +45,6 @@ class User
   field :name
 
   def admin?
-    email == 'admin@gardian.com'
+    email == 'admin@guardian.com'
   end
 end

@@ -1,0 +1,7 @@
+<h1>New User</h1>
+<%= simple_form_for User.new %>
+  <%= f.input :name %>
+  <%= f.input :email%>
+   <%= f.input :password%>
+  <%= f.button :submit  %>
+<% end %>

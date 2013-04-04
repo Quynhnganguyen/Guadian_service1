@@ -1,5 +1,8 @@
 <h1>Users</h1>
-
+<button class = 'btn'> <%=  link_to "New user", new_admin_user_path, method: :get %></button>
+<button class= "btn" style = "float: right; margin-bottom: 10px;">
+      <%= link_to "Manage Entry", admin_entries_path  %>
+</button><br>
 <table class="table table-bordered">
 	<thead>
 		<tr>
@@ -13,8 +16,13 @@
 			<tr>
 				<td><%= u.email %></td>
 				<td><%= u.name %></td>
-				<td>chua co</td>
+				<td>
+						
+					<button class = 'btn'> <%=  link_to "Delete", admin_user_path(u), method: :delete,  data: { confirm: 'Are you sure?' } %></button>
+				</td>
 			</tr>
 		<% end %>
+
+		
 	</tbody>
 </table>
