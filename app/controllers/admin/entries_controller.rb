@@ -15,6 +15,4 @@ class Admin::EntriesController < ApplicationController
 
   end
 
-
-
 end
