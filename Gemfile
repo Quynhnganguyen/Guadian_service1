@@ -15,7 +15,7 @@ gem "compass", ">= 0.10.6"
 gem "therubyracer"
 gem "less-rails"
 gem 'rack-cache', :require => 'rack/cache'
-gem 'dragonfly', '~>0.9.14'
+gem 'dragonfly', '~>1.4.0'
 
 gem 'pry'
 # Gems used only for assets and not required
